@@ -266,13 +266,22 @@
       box-shadow: 0 12px 30px rgba(212,175,55,0.6);
     }
 
+    /* Mobile Responsive Adjustments */
     @media (max-width: 768px) {
-      .domain-name { font-size: 3rem; }
+      .domain-name { font-size: 3rem; margin: 20px 0; }
       h1 { font-size: 2.2rem; }
       .tagline { font-size: 1.1rem; }
       .value-props { grid-template-columns: 1fr; padding: 40px 20px; }
       .stats { flex-direction: column; gap: 30px; }
       .stat-number { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 430px) {
+      .domain-name { font-size: 2.2rem; }
+      h1 { font-size: 1.8rem; }
+      .tagline { font-size: 1rem; }
+      .cta-heading { font-size: 1.8rem; }
+      .cta-text { font-size: 1rem; }
     }
   </style>
 </head>
@@ -331,7 +340,7 @@
     </footer>
   </div>
 
-  <!-- Floating CTA with updated buyer-friendly email -->
+  <!-- Floating CTA -->
   <a href="mailto:hackanet.domains@gmail.com?subject=Hackanet.com%20-%20Premium%20Domain%20for%20Sale&body=Hi,%0D%0A%0D%0AI%20am%20reaching%20out%20regarding%20the%20acquisition%20of%20Hackanet.com.%20The%20domain%20is%20available%20for%20purchase.%20Please%20share%20your%20offer%20or%20let%20me%20know%20the%20next%20steps.%0D%0A%0D%0AThank%20you." class="floating-cta">
     <i class="fas fa-envelope"></i> Request Acquisition Details
   </a>

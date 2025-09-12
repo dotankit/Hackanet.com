@@ -421,11 +421,12 @@
       </div>
       
       <!-- Offer Amount -->
-      <div class="form-group" style="position: relative;">
-        <label for="offer">Your Offer Amount (USD)</label>
-        <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color:#00ff7f; font-weight:700; font-family:'Orbitron', monospace;">$</span>
-        <input type="number" id="offer" name="offer" placeholder="Enter your offer amount" required min="9999" step="10000" style="padding-left:30px;">
-      </div>
+     <div class="form-group" style="position: relative;">
+  <label for="offer">Your Offer Amount (USD)</label>
+  <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color:#00ff7f; font-weight:700; font-family:'Orbitron', monospace;">$</span>
+  <input type="number" id="offer" name="offer" placeholder="Enter your offer amount" required min="9999" step="10000" style="padding-left:30px;">
+</div>
+
       
       <!-- Optional Message -->
       <div class="form-group">
@@ -504,6 +505,22 @@ window.addEventListener('resize', initCanvas);
 
 // Initial setup
 initCanvas();
+// Mobile detection
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const offerInput = document.getElementById('offer');
+
+  if (isMobile()) {
+    // Mobile-specific behavior
+    offerInput.min = 9999;      // mobile minimum
+    offerInput.step = 1;        // allow typing any amount
+    offerInput.placeholder = "Enter your offer (min $9999)";
+  }
+});
+
 </script>
 </body>
 </html>

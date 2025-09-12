@@ -318,12 +318,16 @@
 
     /* === Responsive Design === */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.8rem;
-      }
-      header p {
-        font-size: 1.1rem;
-      }
+  header h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    word-break: break-word;
+    letter-spacing: 1px;
+  }
+  header p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+}
+
       .cta {
         flex-direction: column;
         align-items: center;
